@@ -9,12 +9,24 @@ use Symfony\Component\Routing\Annotation\Route;
 class PersonnageController extends AbstractController
 {
     /**
-     * @Route("/personnage", name="personnage")
+     * @Route("/", name="personnage")
      */
     public function index(): Response
     {
         return $this->render('personnage/index.html.twig', [
-            'controller_name' => 'PersonnageController',
+            //'controller_name' => 'PersonnageController',
+        ]);
+    }
+
+
+
+     /**
+     * @Route("/persos", name="persos")
+     */
+    public function persos(): Response
+    {
+        return $this->render('personnage/persos.html.twig', [
+            //'controller_name' => 'PersonnageController',
         ]);
     }
 }
