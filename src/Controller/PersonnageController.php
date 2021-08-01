@@ -13,7 +13,8 @@ class PersonnageController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('personnage/index.html.twig', [
+
+        return $this->render('personnages/index.html.twig', [
             //'controller_name' => 'PersonnageController',
         ]);
     }
@@ -25,8 +26,10 @@ class PersonnageController extends AbstractController
      */
     public function persos(): Response
     {
-        return $this->render('personnage/persos.html.twig', [
+        return $this->render('personnage/persos.html.twig', 
+        [
             //'controller_name' => 'PersonnageController',
+            "pseudo" => "SACI"
         ]);
     }
 }
